@@ -1,15 +1,24 @@
 package Session_8;
 
+import java.util.Scanner;
+
 public class Binary_Search {
 	public static void main(String args[])
 	{
-		int[] arr = {10,20,30,40,50,60};
-		int data = 20;
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
 		
-		System.out.println(Binary(arr, data));
+		double[] arr;
+		arr = new double[n];
+		for(int i = 0; i<arr.length; i++)
+		{
+			arr[i]=in.nextLong();
+		}
+		int m = in.nextInt();
+		System.out.println(Binary(arr, m));
 	}
 	
-	static int Binary(int[] n, int data)
+	static double Binary(double[] n, int data)
 	{
 		int left = 0;
 		int right = n.length-1;
@@ -18,7 +27,7 @@ public class Binary_Search {
 		{
 			int mid = left+right/2; 
 			if(n[mid]==data)
-				return n[mid];
+				return mid;
 			
 			else if(n[mid]>data)
 				right = mid - 1;

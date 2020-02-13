@@ -1,14 +1,21 @@
 package Session_8;
+import java.util.*;
 
 public class Linear_Search {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {12,34,21,1,34,12};
-		int data = 34;
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
 		
-		
-		System.out.println(linear(arr,data));
+		int[] arr;
+		arr = new int[n];
+		for(int i = 0; i<arr.length; i++)
+		{
+			arr[i]=in.nextInt();
+		}
+		int m = in.nextInt();
+		System.out.println(linear(arr,m));
 				
 	}
 static int linear(int[] n, int data)
@@ -17,7 +24,7 @@ static int linear(int[] n, int data)
 	{
 		if(n[i] == data)
 		{
-			return n[i];
+			return i;
 		}
 	}
 return -1;
