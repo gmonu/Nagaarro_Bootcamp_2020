@@ -20,10 +20,7 @@ public class Reversed {
 		{
 			System.out.print(arr[i]);
 		}
-		
-		
-
-	}
+	}	
 
 	public static void reverse(int[] arr) {
 
@@ -43,3 +40,4 @@ public class Reversed {
 		arr[j] = temp;
 	}
 }
+
