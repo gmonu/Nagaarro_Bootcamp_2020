@@ -1,7 +1,7 @@
 
 import java.util.*; 
 
-class GFG 
+public class Finding_all_unique_number_in_an_array 
 { 
 
 
