@@ -25,38 +25,43 @@ public class Piyush_problem_park_Escape {
 		outloop:
 		for(i = 0; i<m; i++)
 		{
-			//System.out.println(s);
+			
+			System.out.println(s);
 			for(j = 0; j<n; j++)
 			{
 				
-				if(arr[i][j] == '.')
+				
+				if(arr[i][j] == '.' && j==n-1)
 				{
-					if(j==n-1)
-					{
-						s = s-2;
-						System.out.println(s+"Hello");
-						break;
-					}
-					else
-					{
-					s = s-3;
+					s = s-2;
+					System.out.println(s);
 					break;
-					}
+
 				}
-				else if(arr[i][j] == '*')
+				else if(arr[i][j] == '.' && j!=n-1)
+				{
+					s = s-3;
+					System.out.println(s);
+					break;
+
+				}
+				else if(arr[i][j] == '*' && j==n-1)
 				{
 
-					if(j==n-1) {
-						s=s+5;
-						break;
-					}
-					else {
-					s = s+4;
+					s = s+5;
+					System.out.println(s);
 					break;
-					}
+				}
+				else if(arr[i][j] == '*' && j!=n-1)
+				{
+
+					s = s+4;
+					System.out.println(s);
+					break;
 				}
 				else if(arr[i][j] == '#')
 				{
+					System.out.println(s);
 					break outloop;
 				}
 			}

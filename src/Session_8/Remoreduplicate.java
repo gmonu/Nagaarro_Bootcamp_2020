@@ -1,3 +1,4 @@
+package Session_9;
 import java.util.*;
 class RemoveDuplicateInArrayExample{  
 public static int removeDuplicateElements(int arr[], int n){  
